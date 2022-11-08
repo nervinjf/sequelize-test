@@ -8,9 +8,9 @@ const db = new Sequelize({
   database: process.env.DB_NAME || 'todo',
   username: process.env.DB_USERNAME || 'postgres',
   host: process.env.DB_HOST || 'localhost',
-  port: process.env.DB_PORT || 5432,
+  port: process.env.PORT,
   password: process.env.DB_PASS || 'root',
-  dialect: process.env.DB_DIALECT,
+  dialect: 'postgres',
 });
 
 module.exports = db;
