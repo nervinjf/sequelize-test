@@ -48,7 +48,7 @@ const categories = [
   { name: "financiero" },
 ];
 
-db.sync({ force: true })
+db.sync({ force: false })
   .then(async () => {
     console.log("Iniciando plantación");
     users.forEach((user) => Users.create(user));
